@@ -9,17 +9,33 @@
     --cor-background: #141a24;
     --roxo: #833ab4;
     --vermelho: #fd1d1d;
+    --amarelo: #ffd200;
     --laranja: #fc9645;
 
     --sombra: 3px 5px 2px #050505;
 }
 
 body {
-    background: var(--cor-background) !important;
+    background-image: url(./assets/img/background-galaxy.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-h1, h2, h3, h4, h5, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
     color: var(--branco);
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.3px);
+    -webkit-backdrop-filter: blur(5.3px);
 }
 
 .textos-inicio {
@@ -29,11 +45,22 @@ h1, h2, h3, h4, h5, p {
 
 .textos-inicio h3 {
     font-size: 24px;
+    font-weight: 200;
 }
 
 .textos-inicio h1 {
-    font-size: 30px;
+    font-size: 36px;
     color: var(--roxo);
+    text-shadow: var(--sombra);
+}
+
+.textos-inicio p {
+    font-size: 18px;
+}
+
+.nome {
+    font-style: italic;
+    font-weight: bold;
 }
 
 .texto-principal {
@@ -43,14 +70,14 @@ h1, h2, h3, h4, h5, p {
 }
 
 .texto-principal h1 {
-    font-size: 40px;
+    font-size: 48px;
+    text-transform: uppercase;
+    color: var(--laranja);
     text-shadow: var(--sombra);
 }
 
 .texto-principal p {
     font-size: 24px;
-    font-weight: bold;
-    text-shadow: var(--sombra);
 }
 
 .fancy-texto-principal {
