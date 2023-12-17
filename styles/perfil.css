@@ -1,0 +1,67 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --branco: #FFF;
+    --cor-background: #141a24;
+    --cor-shadow: #ced0ec5e;
+    --roxo: #833ab4;
+    --vermelho: #fd1d1d;
+    --amarelo: #ffd200;
+    --laranja: #fc9645;
+    --bg-transparente: #ffffff00;
+    
+
+    --sombra: 3px 5px 2px #050505;
+}
+
+body {
+    background-color: var(--cor-background) !important;
+}
+
+h1, h2, h3, h4, h5, p {
+    color: var(--branco);
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../assets/img/background-galaxy.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.textos-perfil {
+    width: 100%;
+    height: fit-content;
+}
+
+.textos-perfil h1 {
+    color: var(--laranja);
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: var(--sombra);
+}
+
+.textos-perfil h3 {
+    color: var(--branco);
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: var(--sombra);
+}
+
+.card-perfil {
+    width: 70%;
+    height: 700px;
+    margin: 0 auto;
+    background: var(--bg-transparente);
+    box-shadow: 0 8px 32px 0 var(--cor-shadow);
+    backdrop-filter: blur( 18px );
+    -webkit-backdrop-filter: blur( 18px );
+    border-radius: 10px;
+    border: 1px solid var(--branco);
+}
