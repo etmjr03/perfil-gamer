@@ -9,6 +9,7 @@ if(isset($_POST['nome'], $_POST['jogoPrincipal'], $_POST['descricao'])){
     $obPerfil->nome          = $_POST['nome'];
     $obPerfil->jogoPrincipal = $_POST['jogoPrincipal'];
     $obPerfil->descricao     = $_POST['descricao'];
+    $obPerfil->cadastrar();
 
     echo '<pre>'; print_r($obPerfil); echo '</pre>';
 }

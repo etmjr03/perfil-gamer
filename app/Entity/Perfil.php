@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use \App\Db\Database;
+
 class Perfil{
 
     public $id;
@@ -16,6 +18,12 @@ class Perfil{
         $this->data = date('Y-m-d H:i:s');
 
         //INSERIR O PERFIL NO BANCO
+        $obDatabase = new Database('perfil');
+        $obDatabase->insert([
+            'nome' => $this->nome,
+            'jogoPrincipal' => $this->jogoPrincipal,
+            'descricao' => $this->descricao,
+        ]);
 
         //ATRIBUIR O ID DO PERFIL NA INSTANCIA
 
