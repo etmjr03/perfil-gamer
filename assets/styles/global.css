@@ -1,0 +1,47 @@
+/* @import url("https://fonts.googleapis.com/css?family=Montserrat:300"); */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --branco: #FFF;
+    --cor-background: #141a24;
+    --roxo: #833ab4;
+    --vermelho: #fd1d1d;
+    --amarelo: #ffd200;
+    --laranja: #fc9645;
+
+    --sombra: 3px 5px 2px #050505;
+}
+
+body {
+    background-image: url(/assets/img/background-galaxy.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.logo {
+    height: 200px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    color: var(--branco);
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.3px);
+    -webkit-backdrop-filter: blur(5.3px);
+}
