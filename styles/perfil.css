@@ -19,12 +19,12 @@
     --sombra: 3px 5px 2px #050505;
 }
 
-body {
-    background-color: var(--cor-background) !important;
+h1, h2, h3, h4, h5, p, label{
+    color: var(--branco);
 }
 
-h1, h2, h3, h4, h5, p {
-    color: var(--branco);
+a {
+    text-decoration: none !important;
 }
 
 main {
@@ -33,6 +33,20 @@ main {
     background-image: url(../assets/img/background-galaxy.png);
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.botao-padrao {
+    padding: 10px;
+    background: var(--bg-transparente);
+    color: var(--branco);
+    border: 3px solid var(--roxo);
+    border-radius: 10px;
+}
+
+.botao-padrao:hover {
+    background: var(--roxo);
+    color: var(--branco);
+    border: 3px solid var(--branco);
 }
 
 .textos-perfil {
