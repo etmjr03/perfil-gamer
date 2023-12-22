@@ -10,10 +10,10 @@
                             <td>'.$perfil->descricao.'</td>
                             <td>'.date('d/m/Y à\s H:i:s', strtotime($perfil->data)).'</td>
                             <td>
-                                <a href="editar.php?id="'.$perfil->id.'">
+                                <a href="editar.php?id='.$perfil->id.'">
                                     <button type="button" class="botao-editar">Editar</button>
                                 </a>
-                                <a href="excluir.php?id="'.$perfil->id.'">
+                                <a href="excluir.php?id='.$perfil->id.'">
                                     <button type="button" class="botao-excluir">Excluir</button>
                                 </a>
                             </td>

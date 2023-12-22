@@ -4,9 +4,23 @@ require __DIR__.'/vendor/autoload.php';
 
 use \App\Entity\Perfil;
 
+//VALIDAÇÃO DO ID
+if(!isset($_GET['id']) || !is_numeric($_GET['id'])){
+    header('location: perfil.php?status=error');
+    exit;
+}
+
+$obPerfil = Perfil::getPerfil($_GET['id']);
+print_r($obPerfil);
+
+//VALIDAÇÃO DA PERFIL
+if(!$obPerfil instanceof Perfil){
+    header('location: perfil.php?status=error');
+    exit;
+}
+
 //VALIDAÇÃO DO POST
 if(isset($_POST['nome'], $_POST['jogo'], $_POST['descricao'])){
-    $obPerfil = new Perfil;
     $obPerfil->nome          = $_POST['nome'];
     $obPerfil->jogo = $_POST['jogo'];
     $obPerfil->descricao     = $_POST['descricao'];
@@ -21,7 +35,7 @@ if(isset($_POST['nome'], $_POST['jogo'], $_POST['descricao'])){
 include __DIR__.'/includes/header.php';
 
 //INCLUDE DA LISTAGEM
-include __DIR__.'/includes/formulario.php';
+include __DIR__.'/includes/listagem.php';
 
 //INCLUDE DO FOOTER
 include __DIR__.'/includes/footer.php';

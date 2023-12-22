@@ -4,7 +4,7 @@ require __DIR__.'/vendor/autoload.php';
 
 use \App\Entity\Perfil;
 
-$perfis = Perfil::getPerfil();
+$perfis = Perfil::getPerfis();
 
 //INCLUDE DO HEADER
 include __DIR__.'/includes/header.php';
