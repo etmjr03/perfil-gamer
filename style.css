@@ -16,10 +16,11 @@
     --sombra: 3px 5px 2px #050505;
 }
 
-body {
+body {     
     background-image: url(./assets/img/background-galaxy.png);
     background-size: cover;
     background-repeat: no-repeat;
+    min-height: 100vh; 
 }
 
 h1,

@@ -79,3 +79,14 @@ main {
     border-radius: 10px;
     border: 1px solid var(--branco);
 }
+
+.imagem-perfil {
+    display: flex;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border: 2px solid var(--roxo);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}

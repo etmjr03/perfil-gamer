@@ -11,7 +11,9 @@ if(isset($_POST['nome'], $_POST['jogoPrincipal'], $_POST['descricao'])){
     $obPerfil->descricao     = $_POST['descricao'];
     $obPerfil->cadastrar();
 
-    echo '<pre>'; print_r($obPerfil); echo '</pre>';
+    //DIRECIONA PARA A PÁGINA DE PERFIL APÓS CADASTRAR
+    header('location: perfil.php?status=sucesso');
+    exit;
 }
 
 //INCLUDE DO HEADER

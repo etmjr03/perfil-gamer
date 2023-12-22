@@ -33,7 +33,30 @@ class Database{
         }
     }
 
-    public function insert(){
-        
+    //MÉTODO RESPONSÁVEL POR EXECUTAR QUERY NO BANCO DE DADOS ($query = string, $parametro = array)
+    public function execute($query, $parametros = []){
+        try{
+            $statement = $this->conexaoPdo->prepare($query);
+            $statement->execute($parametros);
+            return $statement;
+        }catch(PDOException $e){
+            die('ERROR: '.$e->getMessage());
+        }
+    }
+
+    //MÉTODO RESPONSÁVEL POR INSERIR OS DADOS NO BANCO ($values = array)
+    public function insert($values){
+        //DADOS DA QUERY
+        $dados = array_keys($values);
+        //CRIA UM ARRAY QUE TERÁ A QUANTIDADE DE POSIÇÕES DE DADOS E ADICIONA '?' CASO NÃO TENHA
+        $posicao = array_pad([], count($dados), '?');
+
+        //MONTA A QUERY DE INSERT
+        $query = 'INSERT INTO perfil ('.implode(', ',$dados).') VALUES ('.implode(', ',$posicao).')';
+
+        //EXECUTA O INSERT
+        $this->execute($query, array_values($values));
+
+        return $this->conexaoPdo->lastInsertId();
     }
 }

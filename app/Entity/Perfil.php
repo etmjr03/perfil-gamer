@@ -19,14 +19,13 @@ class Perfil{
 
         //INSERIR O PERFIL NO BANCO
         $obDatabase = new Database('perfil');
-        $obDatabase->insert([
-            'nome' => $this->nome,
-            'jogoPrincipal' => $this->jogoPrincipal,
-            'descricao' => $this->descricao,
+        $this->id = $obDatabase->insert([
+            'nome'           => $this->nome,
+            'jogo_principal' => $this->jogoPrincipal,
+            'descricao'      => $this->descricao,
+            'data'           => $this->data
         ]);
 
-        //ATRIBUIR O ID DO PERFIL NA INSTANCIA
-
-        //RETORNAR SUCESSO
+        return true;
     }
 }
