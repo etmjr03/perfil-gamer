@@ -54,9 +54,23 @@ class Database{
         //MONTA A QUERY DE INSERT
         $query = 'INSERT INTO perfil ('.implode(', ',$dados).') VALUES ('.implode(', ',$posicao).')';
 
-        //EXECUTA O INSERT
+        //EXECUTA A QUERY DE INSERT
         $this->execute($query, array_values($values));
 
         return $this->conexaoPdo->lastInsertId();
+    }
+
+    //MÉTODO RESPONSÁVEL POR BUSCAR OS DADOS NO BANCO ($where = string, $order = string, $limit = string, $campos = string)
+    public function select($where = null, $order = null, $limit = null, $campos = '*'){
+        //DADOS DA QUERY
+        $where = strlen($where) ? 'WHERE '.$where : '';
+        $order = strlen($order) ? 'ORDER BY '.$order : '';
+        $limit = strlen($limit) ? 'LIMIT '.$limit : '';
+
+        //MONTA A QUERY DE SELECT
+        $query = 'SELECT '.$campos.' FROM '.$this->tabela.' '.$where.' '.$order.' '.$limit;
+
+        //EXECUTA A QUERY DE SELECT
+        return $this->execute($query);
     }
 }

@@ -12,7 +12,7 @@
         </div>
         <div class="form-group">
             <label class="mb-2">Seu jogo principal</label>
-            <input type="text" class="form-control mb-4" placeholder="máximo 15 digitos" name="jogoPrincipal">
+            <input type="text" class="form-control mb-4" placeholder="máximo 15 digitos" name="jogo">
         </div>
         <div class="form-group">
             <label class="mb-2">Sua descrição</label>

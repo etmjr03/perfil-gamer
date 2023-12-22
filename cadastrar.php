@@ -4,10 +4,10 @@ require __DIR__.'/vendor/autoload.php';
 
 use \App\Entity\Perfil;
 
-if(isset($_POST['nome'], $_POST['jogoPrincipal'], $_POST['descricao'])){
+if(isset($_POST['nome'], $_POST['jogo'], $_POST['descricao'])){
     $obPerfil = new Perfil;
     $obPerfil->nome          = $_POST['nome'];
-    $obPerfil->jogoPrincipal = $_POST['jogoPrincipal'];
+    $obPerfil->jogo = $_POST['jogo'];
     $obPerfil->descricao     = $_POST['descricao'];
     $obPerfil->cadastrar();
 
