@@ -90,3 +90,31 @@ main {
     justify-content: center;
     align-items: center;
 }
+
+.botao-editar {
+    padding: 10px;
+    background: var(--roxo);
+    color: var(--branco);
+    border: 3px solid var(--branco);
+    border-radius: 10px;
+}
+
+.botao-editar:hover {
+    background: var(--branco);
+    color: var(--roxo);
+    border: 3px solid var(--roxo);
+}
+
+.botao-excluir {
+    padding: 10px;
+    background: var(--laranja);
+    color: var(--branco);
+    border: 3px solid var(--branco);
+    border-radius: 10px;
+}
+
+.botao-excluir:hover {
+    background: var(--branco);
+    color: var(--laranja);
+    border: 3px solid var(--laranja);
+}

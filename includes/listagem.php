@@ -9,7 +9,14 @@
                             <td>'.$perfil->jogo.'</td>
                             <td>'.$perfil->descricao.'</td>
                             <td>'.date('d/m/Y à\s H:i:s', strtotime($perfil->data)).'</td>
-                            <td></td>
+                            <td>
+                                <a href="editar.php?id="'.$perfil->id.'">
+                                    <button type="button" class="botao-editar">Editar</button>
+                                </a>
+                                <a href="excluir.php?id="'.$perfil->id.'">
+                                    <button type="button" class="botao-excluir">Excluir</button>
+                                </a>
+                            </td>
                         </tr>';
     }
 ?>
@@ -20,7 +27,7 @@
     </a>
 
     <section>
-        <table class="table bg-light mt-3">
+        <table class="table bg-light mt-4 rounded">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -28,6 +35,7 @@
                     <th>Jogo principal</th>
                     <th>Descrição</th>
                     <th>Data</th>
+                    <th>Ações</th>
                 </tr>
             </thead>
             <tbody>
